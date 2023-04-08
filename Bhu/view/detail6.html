@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>详情页</title>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/main3.css">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_sl4e9z50nwvr6bt9.css">
+    <link rel="stylesheet" href="search_style.css">
+    <style>
+         #rgba-gradient {
+            /* fallback for old browsers */
+            width: 100%;
+            background: rgba(35, 7, 77, 0.6);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: -webkit-linear-gradient(to right, rgba(65, 187, 218, 0.6) rgba(217, 210, 226, 0.6));
+            /*W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            background: linear-gradient(to right, rgba(83, 113, 211, 0.6), rgba(117, 189, 165, 0.6));
+        }     
+        body {
+            background-image: url(../1.jpg);
+            background-size: cover;
+        }
+        .login-right {
+            position: absolute !important;
+            right: 300px;
+            }
+
+            .ask-right {
+            position: absolute !important;
+            top:10px;
+            right: 0px;
+        }
+        .info-right {
+            position: absolute !important;
+            top:10px;
+            right: 110px; 
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header_inner" id="rgba-gradient">
+            <div class="header_logo">
+                <a href="#">
+                    <h1>B乎</h1>
+                </a>
+            </div>
+            <div class="header_content">
+                <div class="header_content_left">
+                    <nav class="nav">
+                        <input type="radio" name="nav-item-opt" id="nav-item-opt-1" checked>
+                        <label class="nav-item" for="nav-item-opt-1">  <a href="../index.html" >首页</a></label>
+
+                        <label class="nav-item" for="nav-item-opt-2"> <a href="../me.html" >我的</a></label>
+
+
+                        <label class="nav-item" for="nav-item-opt-3"><a href="../relate.html">最近</a></label>
+
+
+                        <label class="nav-item" for="nav-item-opt-4"><a href="../shou_cang.html" >收藏</a></label>
+                        <div class="tracker"></div>
+                    </nav>
+
+
+                </div>
+                <div class="login-right" > 
+                    <div class="table_cell_wrapper" style="width:10px ;">
+                        <div class="user_bar">
+                            <img src="../2.jpg" id="showLogDialog" class="user_icon pointer" alt="">
+                            <!--<div class="user_icon"></div>-->
+                        </div>
+                    </div>
+                </div>
+                <div class="info-right">
+                    <div class="table_cell_wrapper">
+                        <div class="infoBar">
+                            <button id="showinfoDialog" class="ask_button" style="border-radius: 20px;margin-right:100px;height:120%">个人信息</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="ask-right" > 
+                    <script type="text/javascript" src="js/info.js"></script>
+                    <div class="table_cell_wrapper">
+                        <div class="askBar">
+                            <button id="showAskDialog" class="ask_button" style="border-radius: 20px;margin-right:100px;height:120%">提问</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="content_wrapper3">
+        <div class="content_item">
+            <div class="content_inner">
+                <div class="item_header it1">
+                    <h2>压力大，解压有什么好的方式?</h2>
+                    <div class="item_header_user"><span class="user_name">匿名用户</span><span>,</span><span>用户介绍</span></div>
+                </div>
+                <div class="content_item ct1">
+                    <img src="../q4.jpg" alt="">
+                </div>
+                <div class="item_main_content it2">
+                    有什么句子是你一生都忘不了的吗？快来跟大伙子分享一下吧!
+                </div>
+
+                <div class="item_footer">
+                    <div class="left"><span>3条回答</span></div>
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+        <div class="content_info ct2">
+            <h1>----- 回答 -----</h1>
+        </div>
+
+        <div class="content_item">
+            <div class="content_inner">
+                <div class="item_header clearfix">
+                    <div class="detail_item_header_user"><span class="user_name">小树宝贝</span></div>
+                    <div class="start">
+                        <ul id="star_select2"></ul>
+                    </div>
+                </div>
+                <div class="item_main_content">
+                    1、去慢跑、打羽毛球、乒乓球等运动，运动可以让自己变得乐观，相信我。<br><br> 2、养一只狗狗吧，动物可以治愈内心，最温暖的的陪伴。
+                    <br><br> 3、去游戏厅玩玩游戏，投篮、抓娃娃、其他小游戏，玩一玩心情也就轻松了。
+                    <br><br> 4、去旅游，远的去不了，就就近玩，一日游、二日游，旅游的时候人会短暂脱离原本的生活圈子，透透气。
+                    <br><br> 5、看一本书，看一场电影，或者睡一个好觉>。
+                    <br><br> 6、直面压力，搞清楚是什么让你感到压力大，然后去解决它。
+                    <br><br> 祝你快乐！
+                </div>
+            </div>
+            <div class="content_inner">
+                <div class="item_header clearfix">
+                    <div class="detail_item_header_user"><span class="user_name">笔名</span></div>
+                    <div class="start">
+                        <ul id="star_select">
+                            <li class="star_unselect">&#xe623;</li>
+                            <li class="star_unselect">&#xe623;</li>
+                            <li class="star_unselect">&#xe623;</li>
+                            <li class="star_unselect">&#xe623;</li>
+                            <li class="star_unselect">&#xe623;</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item_main_content">
+                    吃货减压法：对于吃货来说，开心不开心，都可以通过吃减压。<br><br> 看剧减压法：看别人的故事，替自己减压，可以看浪漫的韩剧，轻松还可以哭一场，很减压。
+                    <br><br> 谈恋爱减压法：找一个懂你的人，给你个依靠，让你放松平静下来。
+                    <br><br> 地理减压法：离开这里，让自己换个环境来减少压力。
+                    <br><br> 读书减压法：同看剧减压，读轻松玄幻的小说，能让你忘记世界的存在，压力自然会小一些
+                </div>
+
+            </div>
+            <div class="content_inner">
+                <div class="item_header clearfix">
+                    <div class="detail_item_header_user"><span class="user_name">缪斯</span></div>
+                    <div class="start">
+                        <ul>
+                            <li class="star_unselect">&#xe623;</li>
+                            <li class="star_unselect">&#xe623;</li>
+                            <li class="star_unselect">&#xe623;</li>
+                            <li class="star_unselect">&#xe623;</li>
+                            <li class="star_unselect">&#xe623;</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item_main_content">
+                    生活当中的压力是无处不在的，我们也是允许有压力的存在的，只要我们能够用正确的心态去面对，将压力化为生活中的动力，减轻其压力，一样可以生活的轻松自在， 压力也不会影响到我们的正常生活。
+                    <br><br> 一、找倾诉对象倾诉
+                    <br> 如果你有很要好的朋友，你心里有压力，你不知道向谁诉说的时候，你可以通过向你的好朋友，去倾诉，将自己内心的压力发泄出来，如果你没有朋友或许你不想将 自己的想法告诉任何一个人，那么你可以找一个你喜欢的东西，比如，你喜欢毛绒之类的抱枕，你可以在没有人的时候，对着你自己喜欢的玩物倾诉，将自己的内心 深处的想法全部告诉它，也可以一边诉说一边哭泣，这样的一种倾诉方法也是可以减轻你的压力的。
+                    <br><br> 二、可以通过自我安慰来减轻你的压力
+                    <br> 你遇到了生活的压力没有办法解决的时候，你也可以通过自己安慰自己来帮助自己减轻压力，比如，我：这次月考如果我失败了怎么办？自答：没有关系，不就一次 月考吗？并不代表什么？我：如果同学和老师对我失望了怎么办？自答：不会的，老师和同学一定不会因为自己的一次失败就对自己失望的，相反的自己要在这次失败 当中找出原因，然后有则改之无则加勉，继续努力。
+                    <br><br> 三、可以培养自己更多的兴趣爱好
+                    <br> 生活和工作的压力非常大，现在竞争也很大，在工作之余可以通过做一些自己喜欢的事情来对自己减轻压力，可以去爬爬山，也可以去练练瑜伽，又或者是养宠物，现 在不管是年轻人还是老年人出门的时候都喜欢带上自己的宠物去到处遛遛，这种也无疑不是一种很好的减轻压力的方法。
+                </div>
+            </div>
+
+        </div>
+        <div class="modal" id="addQuesModal">
+            <div class="modal_overlay" id="ask_question">
+                <div class="modal_wrapper">
+                    <div class="model_header">
+                        <div>
+                            <h2>提问</h2>
+                        </div>
+                        <div id="closeAskDialog2"><span class="closs_icon ">&#xe641;</span></div>
+                    </div>
+                    <div class="model_content">
+                        <input class="question" type="text" placeholder="写下你的问题">
+                        <label for="question_main">问题说明：</label>
+                        <textarea name="question_main" id="question_main" cols="30" rows="5"></textarea>
+                    </div>
+                    <div class="model_footer">
+                        <a class="btn_cancel" href="" id="closeAskDialog">取消</a>
+                        <button class="btn_save">发布</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            var kp3 = function(txt) {
+                var ino = txt.previousElementSibling;
+                txt = document.getElementById("pwd");
+                if (txt.value.length == 0) {
+                    txt.style.borderBottom = "1px solid red";
+                    ino.style.backgroundColor = "transparent";
+                    ino.innerHTML = "<font color='red'>密码不能为空</font>";
+                } else {
+                    if (txt.value.length < 8) {
+                        txt.style.borderBottom = "1px solid red";
+                        ino.style.backgroundColor = "transparent";
+                        ino.innerHTML = "<font color='red'>密码范围应在8~20个字符之间</font>";
+                    } else if (txt.value.length > 20) {
+                        txt.style.borderBottom = "1px solid red";
+                        ino.style.backgroundColor = "transparent";
+                        ino.innerHTML = "<font color='red'>密码范围应在8~20个字符之间</font>";
+                    } else {
+                        txt.style.borderColor = "green";
+                        ino.style.backgroundColor = "transparent";
+                        ino.innerHTML = "<font color='green'>密码输入格式正确</font>";
+                    }
+                }
+            }
+        </script>
+        <script src="../js/index.js"></script>
+        <div class="modal" id="userinfo">
+            <div class="modal_overlay">
+                <div class="modal_wrapper">
+                    <div class="model_header">
+                        <div style="color: #03e9f4;">
+                            <h2>个人信息页面</h2>
+                            <p style="color: #03e9f4;">当前用户名为：<label id="personal_info_username"></label></p>
+                            <p style="color: #03e9f4;">当前手机号码为：<label id="personal_info_phonenumber"></label></p>
+                            <p style="color: #03e9f4;">当前密码为：<label id="personal_info_password"></label></p>
+                        </div>
+                    </div>
+                    <div class="model_content">
+                        <div class="user-box">
+                            <div id="mm">
+                                <label for="question_main">修改密码：</label>
+                                <div></div>
+                                <input class="question" id="pwd" name="pwd" type="text" placeholder="请输入密码" onkeyup="kp3(this)">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="model_footer" style="position: relative;height: 25px">
+                        <a class="btn_cancel" href="" id="closeLogDialog2">
+                            取消
+                        </a>
+                        <a href="javascript:void(0)" onclick="change_password();">
+                            修改信息
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="js/info.js"></script>
+            <div class="modal" id="userLogin">
+                <div class="modal_overlay">
+                    <div class="modal_wrapper">
+                        <div class="model_header">
+                            <div id="dl1" style="color: #03e9f4;">
+                                <h2>登录界面</h2>
+                            </div>
+                            <div id="zc1" style="color: #03e9f4; display: none;">
+                                <h2>注册界面</h2>
+                            </div>
+                            <a id="dl" onclick="zc()" style="color: #03e9f4; text-decoration: none;">没有登录？注册</a>
+                            <a id="zc" onclick="dl()" style="color: #03e9f4; text-decoration: none; display:none">已有帐户？登录</a>
+                        </div>
+                        <div class="model_content">
+                            <div class="user-box">
+                                <div id="yhm" style="display:none">
+                                    <label for="question_main">用户名：</label>
+                                    <div></div>
+                                    <input class="question" id="username" name="username" type="text" placeholder="请输入用户名" onkeyup="kp(this)">
+                                </div>
+                            </div>
+                            <div class="user-box">
+                                <div id="dhhm">
+                                    <label for="question_main">手机号码：</label>
+                                    <div></div>
+                                    <input class="question" id="userphone" name="userphone" type="text" placeholder="请输入手机号码" onkeyup="kp1(this)">
+                                </div>
+                            </div>
+                            <div class="user-box">
+                                <div id="mm">
+                                    <label for="question_main">密码：</label>
+                                    <div></div>
+                                    <input class="question" id="password" name="password" type="password" placeholder="请输入密码" onkeyup="kp2(this)">
+                                </div>
+                            </div>
+        
+                        </div>
+                        <div class="model_footer" style="position: relative;height: 25px">
+                            <a class="btn_cancel" href="" id="closeLogDialog2" >
+                                取消
+                            </a>
+                            <a href="javascript:void(0)" id="btndl" onclick="login();">
+                                登录
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </a>
+                            <a href="javascript:void(0)" id="btnzc" style="display: none;" onclick="RegExpRegister();">
+                                注册
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        
+            <script type="text/javascript" src="js/pagnation.js"></script>
+            <script type="text/javascript" src="js/index.js"></script>
+            <script>
+                function dl() {
+                    var cc = document.getElementById("yhm");
+                    cc.style.display = "none";
+                    var bb = document.getElementById("btnzc");
+                    bb.style.display = "none";
+                    var bb = document.getElementById("btndl");
+                    bb.style.display = "inline";
+                    var dl = document.getElementById("dl");
+                    dl.style.display = "inline";
+                    var zc = document.getElementById("zc");
+                    zc.style.display = "none";
+                    var dl1 = document.getElementById("dl1");
+                    dl1.style.display = "inline";
+                    var zc1 =  document.getElementById("zc1");
+                    zc1.style.display = "none";
+        
+                }
+                function zc() {
+                    var cc = document.getElementById("yhm");
+                    cc.style.display = "block";
+                    var bb = document.getElementById("btndl");
+                    bb.style.display = "none";
+                    var bb = document.getElementById("btnzc");
+                    bb.style.display = "inline";
+                    var dl = document.getElementById("dl");
+                    dl.style.display = "none";
+                    var zc = document.getElementById("zc");
+                    zc.style.display = "inline";
+                    var dl1 = document.getElementById("dl1");
+                    dl1.style.display = "none";
+                    var zc1 = document.getElementById("zc1");
+                    zc1.style.display = "inline";
+                }
+                function yao() {
+                    var el = document.getElementById("mypage");
+                    el.style.color = "red";
+                    el.style.background = "red";
+                    el.setAttribute("class", "");
+                    var el = event.currentTarget;
+                    el.setAttribute("class", "selected");
+                }
+        
+                function byao() {
+                    var el = event.currentTarget;
+                    el.setAttribute("class", "selected");
+                    var el = document.getElementById("first");
+                    el.setAttribute("class", "");
+                    console.log("gggg");
+                }
+            </script>
+        <div class="modal" id="ansQuesModal">
+            <div class="modal_overlay" id="ask_question">
+                <div class="modal_wrapper">
+                    <div class="model_header">
+                        <div>
+                            <h2>回答问题</h2>
+                        </div>
+                        <div id="closeAnsDialog2"><span class="closs_icon ">&#xe641;</span></div>
+                    </div>
+                    <div class="model_content">
+                        <!--<input class="question" type="text" placeholder="写下你的问题">-->
+                        <label for="question_main">我的回答：</label>
+                        <textarea name="question_main" id="question_main" cols="30" rows="5"></textarea>
+                    </div>
+                    <div class="model_footer">
+                        <a class="btn_cancel" href="" id="closeAnsDialog">取消</a>
+                        <button class="btn_save">确定</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="../js/detail.js"></script>
+</body>
+
+</html>

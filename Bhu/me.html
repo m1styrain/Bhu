@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>web大作业</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/main2.css">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_sl4e9z50nwvr6bt9.css">
+    <link rel="stylesheet" href="search_style.css">
+    <style>
+        #rgba-gradient {
+            /* fallback for old browsers */
+            width: 100%;
+            background: rgba(35, 7, 77, 0.6);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: -webkit-linear-gradient(to right, rgba(65, 187, 218, 0.6) rgba(217, 210, 226, 0.6));
+            /*W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            background: linear-gradient(to right, rgba(83, 113, 211, 0.6), rgba(117, 189, 165, 0.6));
+        }     
+        body {
+            background-image: url(1.jpg);
+            background-size: cover;
+        }
+        .login-right {
+            position: absolute !important;
+            right: 300px;
+            }
+
+            .ask-right {
+            position: absolute !important;
+            top:10px;
+            right: 0px;
+        }
+        .info-right {
+            position: absolute !important;
+            top:10px;
+            right: 100px; 
+        }
+    </style>
+    <script type="text/javascript" src="js/local.js"></script>
+
+    <script type="text/javascript">
+        function $(id) {
+            return document.getElementById(id);
+        }
+    </script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header_inner" id="rgba-gradient">
+            <div class="header_logo">
+                <a href="../index.html">
+                    <h1>B乎</h1>
+                </a>
+            </div>
+            <div class="header_content">
+                <div class="header_content_left">
+
+                    <nav class="nav">
+
+                        <label class="nav-item" for="nav-item-opt-1">  <a href="index.html" >首页</a></label>
+
+                        <input type="radio" name="nav-item-opt" id="nav-item-opt-2" checked>
+                        <label class="nav-item" for="nav-item-opt-2"> <a href="me.html" >我的</a></label>
+
+
+                        <label class="nav-item" for="nav-item-opt-3"><a href="relate.html">最近</a></label>
+
+
+                        <label class="nav-item" for="nav-item-opt-4"><a href="shou_cang.html" >收藏</a></label>
+                        <div class="tracker"></div>
+                    </nav>
+                </div>
+                <div class="login-right" > 
+                    <div class="table_cell_wrapper" style="width:10px ;">
+                        <div class="user_bar">
+                            <img src="2.jpg" id="showLogDialog" class="user_icon pointer" alt="">
+                            <!--<div class="user_icon"></div>-->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="search-box">
+                    <input class="search-txt" type="txt" onkeyup="resou()" placeholder="搜你想搜？">
+                   <a class="search-btn" input type="button"> <svg t="1640342486791" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2709" width="32" height="32"><path d="M424.024 766.098c-91.619 0-177.754-35.679-242.538-100.464-133.735-133.737-133.735-351.344 0-485.078 64.784-64.784 150.919-100.462 242.538-100.462s177.754 35.677 242.539 100.462c133.733 133.735 133.735 351.34 0 485.078-64.785 64.783-150.922 100.464-242.539 100.464zM424.024 196.085c-60.637 0-117.643 23.613-160.523 66.489-88.512 88.51-88.51 232.53 0 321.040 42.876 42.876 99.885 66.491 160.523 66.491s117.643-23.614 160.523-66.491c88.51-88.51 88.51-232.53 0-321.040-42.876-42.876-99.885-66.489-160.523-66.489z" fill="" p-id="2710"></path><path d="M886.838 943.904c-14.842 0-29.684-5.663-41.010-16.986l-261.286-261.285c-22.647-22.649-22.647-59.369 0-82.018 22.647-22.647 59.37-22.647 82.018 0l261.286 261.286c22.647 22.649 22.647 59.369 0 82.018-11.325 11.322-26.167 16.985-41.010 16.985z" fill="" p-id="2711"></path></svg></a>
+                    
+                </div>
+                <div class="info-right">
+                    <div class="table_cell_wrapper">
+                        <div class="infoBar">
+                            <button id="showinfoDialog" class="ask_button" style="border-radius: 20px;margin-right:100px;height:120%">个人信息</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ask-right" > 
+                    <script type="text/javascript" src="js/info.js"></script>
+                    <div class="table_cell_wrapper">
+                        <div class="askBar">
+                            <button id="showAskDialog" class="ask_button" style="border-radius: 20px;margin-right:100px;height:120%">提问</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="content_wrapper">
+
+        <div class="content_main" id="question_list">
+
+        </div>
+        <br>
+
+
+    </div>
+
+    <script>
+        function search() {
+            var div = document.getElementById("question_list");
+            div.innerHTML = "";
+            var flag = 1;
+            var text = $("search_text").value;
+            for (var i = 0; i < MESSAGE_NUM; i++) {
+                if (MESSAGES[i].message.match(text) || MESSAGES[i].message_info.match(text)) {
+                    flag = 0;
+                    showSearchMessage(i);
+                }
+            }
+            for (var i = 0; i < COMMENT_NUM; i++) {
+                if (COMMENTS[i].comment.match(text)) {
+                    flag = 0;
+                    showSearchComment(i);
+                }
+            }
+            if (flag == 1) {
+
+                div.setAttribute("style", "font-size:20px;color:gray;width:100px;height:30px;margin:0 auto;margin-top:10px;")
+                div.innerHTML = "无搜索结果";
+            }
+        }
+    </script>
+    <div class="search-box">
+        <input class="search-txt" type="txt" placeholder="搜你想搜？">
+       <a class="search-btn" input type="button"><svg t="1640342486791" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2709" width="32" height="32"><path d="M424.024 766.098c-91.619 0-177.754-35.679-242.538-100.464-133.735-133.737-133.735-351.344 0-485.078 64.784-64.784 150.919-100.462 242.538-100.462s177.754 35.677 242.539 100.462c133.733 133.735 133.735 351.34 0 485.078-64.785 64.783-150.922 100.464-242.539 100.464zM424.024 196.085c-60.637 0-117.643 23.613-160.523 66.489-88.512 88.51-88.51 232.53 0 321.040 42.876 42.876 99.885 66.491 160.523 66.491s117.643-23.614 160.523-66.491c88.51-88.51 88.51-232.53 0-321.040-42.876-42.876-99.885-66.489-160.523-66.489z" fill="" p-id="2710"></path><path d="M886.838 943.904c-14.842 0-29.684-5.663-41.010-16.986l-261.286-261.285c-22.647-22.649-22.647-59.369 0-82.018 22.647-22.647 59.37-22.647 82.018 0l261.286 261.286c22.647 22.649 22.647 59.369 0 82.018-11.325 11.322-26.167 16.985-41.010 16.985z" fill="" p-id="2711"></path></svg></a>
+
+    </div>
+    <div class="modal" id="addQuesModal">
+        <div class="modal_overlay" id="ask_question">
+            <div class="modal_wrapper">
+                <div class="model_header">
+                    <div style="color: #03e9f4;">
+                        <h2>提问</h2>
+                    </div>
+                    <div><span class="closs_icon " id="closeAskDialog2">&#xe641;</span></div>
+                </div>
+                <div class="model_content">
+                    <div class="user-box">
+                        <input hidden class="question" type="text" id="message_id" name="message_id">
+                        <input class="question" type="text" id="message" name="message" placeholder="写下你的问题">
+                    </div>
+                    <div class="user-box">
+                        <label for="question_main">问题说明：</label>
+                        <textarea name="message_info" id="message_info" cols="30" rows="5"></textarea>
+                    </div>
+                </div>
+
+                <div class="model_footer">
+                    <a class="btn_cancel" href="" id="closeAskDialog">取消</a>
+                    <a href="javascript:void(0)" onclick="addMessage()">
+                        发布
+                    </a>
+                    <!--                <button class="btn_save">发布</button>-->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var kp3 = function(txt) {
+            var ino = txt.previousElementSibling;
+            txt = document.getElementById("pwd");
+            if (txt.value.length == 0) {
+                txt.style.borderBottom = "1px solid red";
+                ino.style.backgroundColor = "transparent";
+                ino.innerHTML = "<font color='red'>密码不能为空</font>";
+            } else {
+                if (txt.value.length < 8) {
+                    txt.style.borderBottom = "1px solid red";
+                    ino.style.backgroundColor = "transparent";
+                    ino.innerHTML = "<font color='red'>密码范围应在8~20个字符之间</font>";
+                } else if (txt.value.length > 20) {
+                    txt.style.borderBottom = "1px solid red";
+                    ino.style.backgroundColor = "transparent";
+                    ino.innerHTML = "<font color='red'>密码范围应在8~20个字符之间</font>";
+                } else {
+                    txt.style.borderColor = "green";
+                    ino.style.backgroundColor = "transparent";
+                    ino.innerHTML = "<font color='green'>密码输入格式正确</font>";
+                }
+            }
+        }
+
+    </script>
+    <div class="modal" id="userinfo">
+        <div class="modal_overlay">
+            <div class="modal_wrapper">
+                <div class="model_header">
+                    <div style="color: #03e9f4;">
+                        <h2>个人信息页面</h2>
+                        <p style="color: #03e9f4;">当前用户名为：<label id="personal_info_username"></label></p>
+                        <p style="color: #03e9f4;">当前手机号码为：<label id="personal_info_phonenumber"></label></p>
+                        <p style="color: #03e9f4;">当前密码为：<label id="personal_info_password"></label></p>
+                    </div>
+                </div>
+                <div class="model_content">
+                    <div class="user-box">
+                        <div id="mm">
+                            <label for="question_main">修改密码：</label>
+                            <div></div>
+                            <input class="question" id="pwd" name="pwd" type="text" placeholder="请输入密码" onkeyup="kp3(this)">
+                        </div>
+                    </div>
+                </div>
+                <div class="model_footer" style="position: relative;height: 25px">
+                    <a class="btn_cancel" href="" id="closeLogDialog2">
+                        取消
+                    </a>
+                    <a href="javascript:void(0)" onclick="change_password();">
+                        修改信息
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="js/info.js"></script>
+    <div class="modal" id="userLogin">
+        <div class="modal_overlay">
+            <div class="modal_wrapper">
+                <div class="model_header">
+                    <div id="dl1" style="color: #03e9f4;">
+                        <h2>登录界面</h2>
+                    </div>
+                    <div id="zc1" style="color: #03e9f4; display: none;">
+                        <h2>注册界面</h2>
+                    </div>
+                    <a id="dl" onclick="zc()">没有登录？注册</a>
+                    <a id="zc" onclick="dl()" style="display:none">已有帐户？登录</a>
+                </div>
+                <div class="model_content">
+                    <div class="user-box">
+                        <div id="yhm" style="display:none">
+                            <label for="question_main">用户名：</label>
+                            <div></div>
+                            <input class="question" id="username" name="username" type="text" placeholder="请输入用户名" onkeyup="kp(this)">
+                        </div>
+                    </div>
+                    <div class="user-box">
+                        <div id="dhhm">
+                            <label for="question_main">手机号码：</label>
+                            <div></div>
+                            <input class="question" id="userphone" name="userphone" type="text" placeholder="请输入手机号码" onkeyup="kp1(this)">
+                        </div>
+                    </div>
+                    <div class="user-box">
+                        <div id="mm">
+                            <label for="question_main">密码：</label>
+                            <div></div>
+                            <input class="question" id="password" name="password" type="password" placeholder="请输入密码" onkeyup="kp2(this)">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="model_footer" style="position: relative;height: 25px">
+                    <a class="btn_cancel" href="" id="closeLogDialog2">
+                        取消
+                    </a>
+                    <a href="javascript:void(0)" id="btndl" onclick="login();">
+                        登录
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </a>
+                    <a href="javascript:void(0)" id="btnzc" style="display: none;" onclick="RegExpRegister();">
+                        注册
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="js/pagnation.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script>
+        function dl() {
+            var cc = document.getElementById("yhm");
+            cc.style.display = "none";
+            var bb = document.getElementById("btnzc");
+            bb.style.display = "none";
+            var bb = document.getElementById("btndl");
+            bb.style.display = "inline";
+            var dl = document.getElementById("dl");
+            dl.style.display = "inline";
+            var zc = document.getElementById("zc");
+            zc.style.display = "none";
+            var dl1 = document.getElementById("dl1");
+            dl1.style.display = "inline";
+            var zc1 = document.getElementById("zc1");
+            zc1.style.display = "none";
+
+        }
+
+        function zc() {
+            var cc = document.getElementById("yhm");
+            cc.style.display = "block";
+            var bb = document.getElementById("btndl");
+            bb.style.display = "none";
+            var bb = document.getElementById("btnzc");
+            bb.style.display = "inline";
+            var dl = document.getElementById("dl");
+            dl.style.display = "none";
+            var zc = document.getElementById("zc");
+            zc.style.display = "inline";
+            var dl1 = document.getElementById("dl1");
+            dl1.style.display = "none";
+            var zc1 = document.getElementById("zc1");
+            zc1.style.display = "inline";
+        }
+
+        function yao() {
+            var el = document.getElementById("mypage");
+            el.style.color = "red";
+            el.style.background = "red";
+            el.setAttribute("class", "");
+            var el = event.currentTarget;
+            el.setAttribute("class", "selected");
+        }
+
+        function byao() {
+            var el = event.currentTarget;
+            el.setAttribute("class", "selected");
+            var el = document.getElementById("first");
+            el.setAttribute("class", "");
+            console.log("gggg");
+        }
+    </script>
+
+    <script type="text/javascript" src="js/pagnation.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
